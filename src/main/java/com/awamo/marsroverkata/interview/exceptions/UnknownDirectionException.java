@@ -22,7 +22,7 @@ public class UnknownDirectionException extends RuntimeException{
 	
 	@Override
 	public String getMessage() {
-		return "Unknown command "+this.command+" encountered during navigation. Supported operations are E,W,N,S";
+		return "Unknown command "+this.command+" encountered during navigation. Supported operations are L,R,B,F";
 	}
 	
 
