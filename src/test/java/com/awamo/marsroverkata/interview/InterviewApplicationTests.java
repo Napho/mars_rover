@@ -52,10 +52,10 @@ public class InterviewApplicationTests {
 	@Test
 	public void moveRoverForward() {
 		
-		assertThat(rover.executeCommand("F"),CoreMatchers.equalTo("0,0,E"));
-		assertThat(rover.executeCommand("FF"),CoreMatchers.equalTo("0,0,W"));
-		assertThat(rover.executeCommand("LFF"),CoreMatchers.equalTo("0,0,S"));
-		assertThat(rover.executeCommand("RFF"),CoreMatchers.equalTo("0,0,W"));
+		assertThat(rover.executeCommand("F"),CoreMatchers.equalTo("0,1,N"));
+		assertThat(rover.executeCommand("FF"),CoreMatchers.equalTo("0,3,N"));
+		assertThat(rover.executeCommand("LFF"),CoreMatchers.equalTo("-2,3,W"));
+		assertThat(rover.executeCommand("RFF"),CoreMatchers.equalTo("-2,5,N"));
 			
 	}
 	
@@ -63,10 +63,10 @@ public class InterviewApplicationTests {
 	@Test
 	public void moveRoverBack() {
 		
-		assertThat(rover.executeCommand("LB"),CoreMatchers.equalTo("0,0,E"));
-		assertThat(rover.executeCommand("LBB"),CoreMatchers.equalTo("0,0,W"));
-		assertThat(rover.executeCommand("BBR"),CoreMatchers.equalTo("0,0,S"));
-		assertThat(rover.executeCommand("FFFB"),CoreMatchers.equalTo("0,0,W"));
+		assertThat(rover.executeCommand("LB"),CoreMatchers.equalTo("-1,0,W"));
+		assertThat(rover.executeCommand("LBB"),CoreMatchers.equalTo("-1,2,S"));
+		assertThat(rover.executeCommand("BBR"),CoreMatchers.equalTo("-1,4,W"));
+		assertThat(rover.executeCommand("FFFB"),CoreMatchers.equalTo("-3,4,W"));
 			
 	}
 		
