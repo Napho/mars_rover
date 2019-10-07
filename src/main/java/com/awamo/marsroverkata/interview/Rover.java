@@ -1,10 +1,8 @@
 package com.awamo.marsroverkata.interview;
 
-import java.rmi.activation.UnknownObjectException;
 import java.util.Arrays;
 import java.util.List;
 
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
 import com.awamo.marsroverkata.interview.exceptions.UnknownDirectionException;
@@ -15,7 +13,7 @@ import com.awamo.marsroverkata.interview.utils.Helpers;
  * The Rover class holds state objects and command methods of Rover navigation
  * 
  * @author naphlin
- *
+ * 
  */
 @Component
 public class Rover {
@@ -37,11 +35,11 @@ public class Rover {
 		for (String command : commandArray) {
 			String[] currentState = state.split(",");
 			String direction = currentState[DIRECTION_INDEX];
-			
-			if(!(command.equals(Constants.BACKWARDS) || command.equals(Constants.FORWARD))) {
+
+			if (!(command.equals(Constants.BACKWARDS) || command.equals(Constants.FORWARD))) {
 				direction = Helpers.getNewDirection(currentState[DIRECTION_INDEX], command);
 			}
-			
+
 			String cordinates = Helpers.getNewCordinates(Integer.valueOf(currentState[X_INDEX]),
 					Integer.valueOf(currentState[Y_INDEX]), direction, command);
 

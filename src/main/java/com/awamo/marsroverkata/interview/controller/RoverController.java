@@ -10,20 +10,19 @@ import com.awamo.marsroverkata.interview.Rover;
 
 @RestController
 public class RoverController {
-	
-	
+
 	@Autowired
 	private Rover rover;
-	
+
 	public RoverController() {
-		
+
 	}
-	
+
 	@GetMapping("/rover/move/{commmands}")
 	private String moveRover(@PathVariable String commands) {
-		
+
 		return rover.executeCommand(commands);
-		
+
 	}
 
 }
