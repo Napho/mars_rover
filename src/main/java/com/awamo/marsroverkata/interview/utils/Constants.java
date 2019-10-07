@@ -7,4 +7,6 @@ public class Constants {
 	public static final String NORTH = "N";
 	public static final String WEST = "W";
 
+	public static final String FORWARD = "F";
+	public static final String BACKWARDS = "B";
 }
